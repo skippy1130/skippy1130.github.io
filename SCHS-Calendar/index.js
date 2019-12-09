@@ -1,0 +1,38 @@
+var currentdate = new Date(); 
+var datetime =  currentdate.getMonth()+1 + "/"
+                + currentdate.getDate()  + "/" 
+                + currentdate.getFullYear()
+document.getElementById('text').innerHTML = datetime;
+
+var totalInfo = [];
+
+var date1 = new Date("12/8/2019"); 
+var date2 = new Date(datetime); 
+  
+// To calculate the time difference of two dates 
+var Difference_In_Time = date2.getTime() - date1.getTime(); 
+  
+// To calculate the no. of days between two dates 
+var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
+  
+//To display the final no. of days (result) 
+if (Difference_In_Days%2 == 0) {
+    totalInfo.push("A");
+} else {
+    totalInfo.push("B");
+}
+var daysOff = ["12/20/2019","12/22/2019","12/23/2019","12/24/2019","12/25/2019","12/26/2019","12/27/2019","12/28/2019","12/29/2019","12/30/2019","12/31/2019","1/1/2019","1/2/2019","1/3/2019","1/20/2019","2/14/2019","2/17/2019","3/20/2019","3/21/2019","3/22/2019","3/23/2019","3/24/2019","3/25/2019","3/26/2019","3/27/2019","4/27/2019"];
+if (daysOff.indexOf(datetime) >= 0) {
+  document.write("<br><br>Day off!<br><br>");
+  totalInfo.push("Day off")
+} else {
+  totalInfo.push("0")
+}
+
+if (currentdate.getDay() == 3 && currentdate.getMonth() != 1 && currentdate.getMonth() != 10 && (currentdate.getDate == 1 || currentdate.getDate == 2 || currentdate.getDate == 3 || currentdate.getDate == 4 || currentdate.getDate == 5 || currentdate.getDate == 6 || currentdate.getDate == 7)) {
+  totalInfo.push("Late Start")
+    }
+else {
+  totalInfo.push("0")
+}
+document.write(totalInfo)
