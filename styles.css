@@ -1,0 +1,18 @@
+.test1 {
+  border-radius: 2px;
+  background: #B5221D;
+  text-shadow: 2px 2px black;
+  color: white;
+  width: 150px;
+  height: 160px;
+}
+.img1 {
+  width: 120px;
+  height: 120px;
+}
+body {
+  background-color: #1A1825;
+}
+.text {
+  color: white;
+}
