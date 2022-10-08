@@ -1,0 +1,23 @@
+.text {
+    font-family: 'Alatsi';
+}
+.big {
+    font-size:29px;
+    font-weight: bold;
+}
+.group {
+    margin-left:13px;
+    font-size:20px;
+    font-weight: normal;
+}
+.classesHolder {
+    margin-left:33px;
+    width: 650px;
+}
+.classes {
+    font-size:12px;
+    font-weight: normal;
+}
+.classes:hover {
+    filter: brightness(85%);
+  }
